@@ -1,0 +1,42 @@
+$activeColor: #767787;
+.mat-toolbar.mat-primary{
+    background: $activeColor;
+}
+.header-box {
+    font-size: 14px;
+    font-weight: 400;
+    // box-shadow: 2px 1px 8px -1px #000000;
+    position: fixed;
+    z-index: 1000;
+  
+    .header-title {
+      display: flex;
+      align-items: baseline;
+      margin-right: 100px;
+      margin-left: 0px;
+      align-items: center;
+  
+      .subtitle {
+        font-size: 12px;
+        margin-left: 10px;
+      }
+      img{
+        width: 60px;
+        height: 60px;
+      }
+      h1{
+        margin-left: 20px;
+      }
+    }
+    .header-spacer {
+      flex: 1 1 auto;
+    }
+}
+.user-menu {
+display: flex;
+align-items: center;
+    i {
+        font-size: 20px;
+        font-weight: 200;
+    }
+}

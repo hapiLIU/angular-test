@@ -1,0 +1,18 @@
+<mat-toolbar color="primary" class="header-box mat-elevation-z4">
+    <div class="header-title">
+        <img src="../../../assets/img/haha.jpeg" alt="" width="110" />
+        <h1>学习Angular</h1>
+        <div class="subtitle">自测小平台</div>
+    </div>
+
+    <span class="header-spacer"></span>
+    您好，{{userInfo.realName}}
+    <button mat-button [matMenuTriggerFor]="menu">
+        <i class="material-icons">account_box</i>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button class="user-menu" mat-menu-item routerLink="/test/personal-center" routerLinkActive="btn-active"><i
+                class="material-icons">person_outline</i> 个人中心</button>
+        <button class="user-menu" mat-menu-item (click)="logout()"><i class="material-icons">logout</i> 退出系统</button>
+    </mat-menu>
+</mat-toolbar>

@@ -6,6 +6,7 @@ import { RoutesModule } from './routes/routes.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from './layout/layout.module';
 import { workingRangeModule } from './routes/workingRange/workingRange.moudule';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { workingRangeModule } from './routes/workingRange/workingRange.moudule';
     RoutesModule,
     BrowserAnimationsModule,
     LayoutModule,
-    workingRangeModule
+    workingRangeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

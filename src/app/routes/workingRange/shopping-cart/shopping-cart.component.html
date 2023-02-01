@@ -1,1 +1,23 @@
 <p>shopping-cart works!</p>
+<mat-card class="example-card">
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{testData.chinese_name}}</mat-card-title>
+        <mat-card-subtitle>
+            <span>属性：{{testData.type}}</span>
+            <span>特性：{{testData.ability}}</span>
+        </mat-card-subtitle>
+        <mat-card-subtitle>
+            <span>身高（m）：{{testData.height}}</span>
+            <span>体重（kg）：{{testData.weight}}</span>
+        </mat-card-subtitle>
+        <mat-card-subtitle *ngIf="testData.evolutionaryHierarchy">
+            {{testData.chinese_name}}--{{testData.evolutionaryHierarchy}}级-->{{testData.evolution}}
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <p>
+            ...........
+        </p>
+    </mat-card-content>
+</mat-card>

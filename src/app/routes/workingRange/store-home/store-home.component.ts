@@ -55,8 +55,10 @@ export class StoreHomeComponent {
     "evolutionaryHierarchy",
     "hideProperties",
     "attributeDetails",
+    "operation"
   ];
 
+  // 查看属性详情
   viewAttr(element: any) {
     // console.log(element)
     this.dialog.open(DialogComponent, { data: element })
@@ -65,5 +67,10 @@ export class StoreHomeComponent {
     // dialogRef.afterClosed().subscribe(result => {
     //   console.log('属性详情关闭');
     // });
+  }
+
+  // +1  
+  addPets(element: any) {
+    console.log(element)
   }
 }

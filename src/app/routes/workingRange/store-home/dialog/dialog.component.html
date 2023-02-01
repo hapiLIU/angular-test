@@ -1,0 +1,10 @@
+<h1 mat-dialog-title>{{data.chinese_name}}</h1>
+<div mat-dialog-content>
+    <mat-list role="list">
+        <mat-list-item role="listitem"
+            *ngFor="let value of attr">{{value}}：{{data.attributeDetails[value]}}</mat-list-item>
+    </mat-list>
+</div>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>关闭</button>
+</mat-dialog-actions>

@@ -1,8 +1,10 @@
 .example-card {
     max-width: 600px;
+    display: inline-block;
+    margin:10px 40px;
 }
 .example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-image: url('../../../../assets/img/haha.jpeg');
     background-size: cover;
 }
 .mat-mdc-card-avatar {

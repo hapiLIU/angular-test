@@ -1,23 +1,26 @@
-<p>shopping-cart works!</p>
-<mat-card class="example-card">
+<mat-card class="example-card" *ngFor="let data of testDatas">
     <mat-card-header>
         <div mat-card-avatar class="example-header-image"></div>
-        <mat-card-title>{{testData.chinese_name}}</mat-card-title>
+        <mat-card-title>{{data.chinese_name}}</mat-card-title>
         <mat-card-subtitle>
-            <span>属性：{{testData.type}}</span>
-            <span>特性：{{testData.ability}}</span>
+            属性：{{data.type}}
         </mat-card-subtitle>
         <mat-card-subtitle>
-            <span>身高（m）：{{testData.height}}</span>
-            <span>体重（kg）：{{testData.weight}}</span>
+            特性：{{data.ability}}
         </mat-card-subtitle>
-        <mat-card-subtitle *ngIf="testData.evolutionaryHierarchy">
-            {{testData.chinese_name}}--{{testData.evolutionaryHierarchy}}级-->{{testData.evolution}}
+        <mat-card-subtitle>
+            身高（m）：{{data.height}}
+        </mat-card-subtitle>
+        <mat-card-subtitle>
+            体重（kg）：{{data.weight}}
         </mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
-        <p>
-            ...........
+        <p *ngIf="data.evolutionaryHierarchy">
+            {{data.chinese_name}}--{{data.evolutionaryHierarchy}}级-->{{data.evolution}}
+        </p>
+        <p *ngIf="!data.evolutionaryHierarchy">
+            无法进化
         </p>
     </mat-card-content>
 </mat-card>

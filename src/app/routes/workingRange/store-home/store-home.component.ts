@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from './dialog/dialog.component';
+import { CartService } from 'src/app/services/cart.service';
 export interface PeriodicElement {
   id: string;
   chinese_name: string;
@@ -25,7 +26,8 @@ export class StoreHomeComponent {
   pokemons!: PeriodicElement[]
   constructor(
     private http: HttpClient,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    public cartService: CartService
   ) {
     this.http.get('assets/json/pokemons.json').subscribe((res) => {
       this.pokemons = Object.values(res);
@@ -70,7 +72,8 @@ export class StoreHomeComponent {
   }
 
   // +1  
-  addPets(element: any) {
+  addPets(element: PeriodicElement) {
     console.log(element)
+    this.cartService.addToCart(element)
   }
 }

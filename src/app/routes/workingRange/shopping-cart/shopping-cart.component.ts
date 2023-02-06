@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -7,7 +8,12 @@ import { Component } from '@angular/core';
 })
 export class ShoppingCartComponent {
   testData: any
-  constructor() {
+  testDatas: any
+  constructor(
+    public cartService: CartService
+  ) {
+    this.testDatas = this.cartService.getItems()
+    console.log(this.testDatas)
     this.testData = {
       "chinese_name": "妙蛙种子",
       "id": 1,

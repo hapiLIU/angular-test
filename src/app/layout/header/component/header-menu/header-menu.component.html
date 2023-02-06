@@ -1,1 +1,4 @@
-<p>header-menu works!</p>
+<button mat-button *ngFor="let item of headerMenus; let i = index" class="header-menu-item" (click)="menuClick(i)"
+    [routerLink]="item.path" routerLinkActive="btn-active" style="margin-right: 10px">
+    {{ item.name }}
+</button>

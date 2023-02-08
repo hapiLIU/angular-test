@@ -1,0 +1,51 @@
+.home{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    .drawing{
+        margin: 0 auto;
+        width: 1300px;
+        height: 700px;
+        text-align: center;
+        .draw{
+            display: inline-block;
+            width: 1300px;
+            height: 620px;
+            #canvas{
+                cursor:crosshair;
+                // background-color: white;
+                border:5px solid #767787;
+            }
+        }
+        .operation{
+            display: inline-block;
+            line-height: 50px;
+            width: 1300px;
+            height: 50px;
+            button{
+                margin: 0 5px;
+            }
+        }
+    }
+    .show{
+        margin: 0 auto;
+        width: 1300px;
+        height: 220px;
+        text-align: center;
+        #image{
+            border: 2px solid #767787;
+            width: 400px;
+            height: 200px;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+        }
+        #scream{
+            width: 400px;
+            height: 200px;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+        }
+    }
+}

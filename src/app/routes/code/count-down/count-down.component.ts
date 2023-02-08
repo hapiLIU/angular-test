@@ -62,7 +62,7 @@ export class CountDownComponent {
       this.secondsOne = Number(this.date.getSeconds().toString()[0])
       this.secondsTwo = Number(this.date.getSeconds().toString()[1])
     }
-    console.log(this.secondsOne, this.secondsTwo)
+    // console.log(this.secondsOne, this.secondsTwo)
   }, 1000);
 
 }

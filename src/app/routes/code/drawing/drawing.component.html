@@ -1,0 +1,30 @@
+<div class="home">
+    <div class="drawing">
+        <div class="draw">
+            <canvas id="canvas" [width]="cwidth" [height]="cheight"> </canvas>
+        </div>
+        <div class="operation">
+            <mat-button-toggle-group [(ngModel)]="toolStyle">
+                <mat-button-toggle value="paintBrush">画笔</mat-button-toggle>
+                <mat-button-toggle value="rubber">橡皮擦</mat-button-toggle>
+            </mat-button-toggle-group>
+            <button mat-raised-button [(colorPicker)]="linecolor" [disabled]="toolStyle=='rubber'">画笔颜色
+                <span style="display: inline-block; width: 10px;height: 10px;border-radius: 50%;"
+                    [style.background]="linecolor"></span>
+            </button>
+            <button mat-raised-button>{{toolStyle=='paintBrush'?'画笔':'橡皮'}}宽度
+                <mat-slider min="1" max="24" step="1">
+                    <input matSliderThumb [(ngModel)]="linw">
+                </mat-slider>
+                <span style="display: inline-block; width: 10px;height: 10px;border-radius: 50%;">{{linw}}</span>
+            </button>
+            <button mat-raised-button class="imports" (click)="importsImg()">导入图片</button>
+            <button mat-raised-button class="eraser" (click)="getEraser()">清空内容</button>
+            <button mat-raised-button (click)="change()">生成图片</button>
+        </div>
+    </div>
+    <div class="show">
+        <img id="image" [src]="src" alt="暂未生成图片" width="500px" height="200px"><br>
+        <img id="scream" [src]="importImgURL" width="500px" height="200px" *ngIf="importImgURL">
+    </div>
+</div>

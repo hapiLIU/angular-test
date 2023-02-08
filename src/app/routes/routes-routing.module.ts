@@ -6,6 +6,7 @@ import { ShoppingCartComponent } from './workingRange/shopping-cart/shopping-car
 import { LayoutDefaultComponent } from '../layout/layout-default/layout-default.component';
 import { JsonEditorComponent } from './code/json-editor/json-editor.component';
 import { CountDownComponent } from './code/count-down/count-down.component';
+import { DrawingComponent } from './code/drawing/drawing.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'workingRange/storeHome', pathMatch: 'full' },
@@ -47,6 +48,11 @@ const routes: Routes = [
         path: 'jsonEditor',
         component: JsonEditorComponent,
         data: { title: 'JSON编辑器' },
+      },
+      {
+        path: 'drawing',
+        component: DrawingComponent,
+        data: { title: '画板' },
       }
     ],
   },

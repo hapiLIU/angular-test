@@ -16,6 +16,7 @@ export class HeaderMenuComponent {
       { name: '小车车', path: '/workingRange/shoppingCart', active: false },
       { name: 'JSON编辑器', path: '/code/jsonEditor', active: false },
       { name: '倒计时', path: '/code/countDown', active: false },
+      { name: '画板', path: '/code/drawing', active: false },
     ];
   }
   menuClick(i: any) {

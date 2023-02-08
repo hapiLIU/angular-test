@@ -42,6 +42,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { ColorPickerModule } from 'ngx-color-picker';
 
 @NgModule({
   exports: [
@@ -88,6 +89,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatTooltipModule,
     MatTreeModule,
     MatFormFieldModule,
+    ColorPickerModule
   ],
 })
 export class MaterialModule { }

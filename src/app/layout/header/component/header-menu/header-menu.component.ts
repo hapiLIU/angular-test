@@ -14,6 +14,8 @@ export class HeaderMenuComponent {
     this.headerMenus = [
       { name: '主页', path: '/workingRange/storeHome', active: false },
       { name: '小车车', path: '/workingRange/shoppingCart', active: false },
+      { name: 'JSON编辑器', path: '/code/jsonEditor', active: false },
+      { name: '倒计时', path: '/code/countDown', active: false },
     ];
   }
   menuClick(i: any) {

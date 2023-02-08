@@ -4,6 +4,8 @@ import { LoginComponent } from './passport/login/login.component';
 import { StoreHomeComponent } from './workingRange/store-home/store-home.component';
 import { ShoppingCartComponent } from './workingRange/shopping-cart/shopping-cart.component';
 import { LayoutDefaultComponent } from '../layout/layout-default/layout-default.component';
+import { JsonEditorComponent } from './code/json-editor/json-editor.component';
+import { CountDownComponent } from './code/count-down/count-down.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'workingRange/storeHome', pathMatch: 'full' },
@@ -34,6 +36,29 @@ const routes: Routes = [
         component: ShoppingCartComponent,
         data: { title: '购物车' },
       },
+    ],
+  },
+  {
+    path: "code",
+    component: LayoutDefaultComponent,
+    data: { animation: 'code' },
+    children: [
+      {
+        path: 'jsonEditor',
+        component: JsonEditorComponent,
+        data: { title: 'JSON编辑器' },
+      }
+    ],
+  },
+  {
+    path: "code",
+    data: { animation: 'code' },
+    children: [
+      {
+        path: 'countDown',
+        component: CountDownComponent,
+        data: { title: '倒计时' },
+      }
     ],
   },
   { path: '**', redirectTo: 'exception/404' },

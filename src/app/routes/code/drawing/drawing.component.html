@@ -24,7 +24,13 @@
         </div>
     </div>
     <div class="show">
-        <img id="image" [src]="src" alt="暂未生成图片" width="500px" height="200px"><br>
+        <div class="pictureGroup">
+            <img id="image" *ngFor="let imaurl of srcArr" [src]="imaurl" alt="暂未生成图片" width="500px" height="200px"><br>
+        </div>
         <img id="scream" [src]="importImgURL" width="500px" height="200px" *ngIf="importImgURL">
+        <mat-form-field class="imageInput">
+            <mat-label>图片链接</mat-label>
+            <input matInput [(ngModel)]='importImgURL'>
+        </mat-form-field>
     </div>
 </div>

@@ -32,19 +32,31 @@
         width: 1300px;
         height: 220px;
         text-align: center;
-        #image{
+        .pictureGroup{
             border: 2px solid #767787;
-            width: 400px;
-            height: 200px;
+            width: 410px;
+            height: 600px;
             position: absolute;
             top: 5px;
             right: 5px;
+            overflow:auto;
+            #image{
+                width: 380px;
+                height: 190px;
+                border: 2px solid #767787;
+                margin: 1px 1px;
+            }
         }
         #scream{
             width: 400px;
             height: 200px;
             position: absolute;
             top: 5px;
+            left: 5px;
+        }
+        .imageInput{
+            position: absolute;
+            top: 210px;
             left: 5px;
         }
     }

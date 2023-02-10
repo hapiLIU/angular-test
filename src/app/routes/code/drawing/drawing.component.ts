@@ -21,6 +21,7 @@ export class DrawingComponent {
   //宽度默认为4
   linw = 4;
   src = ""
+  srcArr: string[] = []
   lastLoc = { x: 0, y: 0 };//初始位置值
   toolStyle = 'paintBrush' //工具形状（画笔or橡皮）
 
@@ -31,7 +32,8 @@ export class DrawingComponent {
   //生成图片
   change(): void {
     this.src = this.canvas.toDataURL("image/jpg");
-    console.log("接受到的图片：" + this.src)
+    this.srcArr.unshift(this.canvas.toDataURL("image/jpg"))
+    // console.log("接受到的图片：" + this.src)
   }
 
   //绘制画板中内容

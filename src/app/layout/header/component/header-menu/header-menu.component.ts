@@ -17,6 +17,7 @@ export class HeaderMenuComponent {
       { name: 'JSON编辑器', path: '/code/jsonEditor', active: false },
       { name: '倒计时', path: '/code/countDown', active: false },
       { name: '画板', path: '/code/drawing', active: false },
+      { name: '地图', path: '/code/map', active: false },
     ];
   }
   menuClick(i: any) {

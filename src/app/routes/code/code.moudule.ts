@@ -3,10 +3,11 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { JsonEditorComponent } from './json-editor/json-editor.component';
 import { CountDownComponent } from './count-down/count-down.component';
 import { DrawingComponent } from './drawing/drawing.component';
+import { MapComponent } from './map/map.component';
 import { JSONEditor } from 'vanilla-jsoneditor';
 
 const COMPONENTS: never[] = [];
-const HEADER_COMPONENTS = [JsonEditorComponent, CountDownComponent, DrawingComponent];
+const HEADER_COMPONENTS = [JsonEditorComponent, CountDownComponent, DrawingComponent, MapComponent];
 // const CUSTOM_ELEMENTS_SCHEMA=[JSONEditor]
 @NgModule({
     imports: [SharedModule],

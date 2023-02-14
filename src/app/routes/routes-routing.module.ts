@@ -7,6 +7,7 @@ import { LayoutDefaultComponent } from '../layout/layout-default/layout-default.
 import { JsonEditorComponent } from './code/json-editor/json-editor.component';
 import { CountDownComponent } from './code/count-down/count-down.component';
 import { DrawingComponent } from './code/drawing/drawing.component';
+import { MapComponent } from './code/map/map.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'workingRange/storeHome', pathMatch: 'full' },
@@ -53,6 +54,11 @@ const routes: Routes = [
         path: 'drawing',
         component: DrawingComponent,
         data: { title: '画板' },
+      },
+      {
+        path: 'map',
+        component: MapComponent,
+        data: { title: '地图' },
       }
     ],
   },

@@ -18,6 +18,7 @@ export class HeaderMenuComponent {
       { name: '倒计时', path: '/code/countDown', active: false },
       { name: '画板', path: '/code/drawing', active: false },
       { name: '地图', path: '/code/map', active: false },
+      { name: '抽奖', path: '/code/luckDraw', active: false },
     ];
   }
   menuClick(i: any) {

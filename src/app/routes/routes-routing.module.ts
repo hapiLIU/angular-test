@@ -8,6 +8,7 @@ import { JsonEditorComponent } from './code/json-editor/json-editor.component';
 import { CountDownComponent } from './code/count-down/count-down.component';
 import { DrawingComponent } from './code/drawing/drawing.component';
 import { MapComponent } from './code/map/map.component';
+import { LuckDrawComponent } from './code/luck-draw/luck-draw.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'workingRange/storeHome', pathMatch: 'full' },
@@ -59,6 +60,11 @@ const routes: Routes = [
         path: 'map',
         component: MapComponent,
         data: { title: '地图' },
+      },
+      {
+        path: 'luckDraw',
+        component: LuckDrawComponent,
+        data: { title: '抽奖' },
       }
     ],
   },
